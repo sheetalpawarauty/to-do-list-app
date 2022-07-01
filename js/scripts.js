@@ -1,6 +1,6 @@
 // jQuery Code
 //1. Adding a new item to the list:
-function newItem(){
+function newItem() {
   
   let li = $('<li></li>');
   let inputValue = $('#input').val();
@@ -13,10 +13,6 @@ function newItem(){
   }
 
 //2. Crossing an item out:
-  function crossOut() {
-    li.toggleClass("strike");
-  }
-
   li.on("dblclick", function crossOut() {
     li.toggleClass("strike");
   });
@@ -27,7 +23,7 @@ function newItem(){
   li.append(crossOutButton);
 
   crossOutButton.on("click", deleteListItem);
-    function deleteListItem(){
+    function deleteListItem() {
       li.addClass("delete")
   }
 
